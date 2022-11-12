@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bullet Journal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- ⬇⬇⬇ DELETE OR COMMENT OUT THESE TWO LINES BEFORE USING THE CLI ⬇⬇⬇ -->
+    <link rel="stylesheet" type="text/css" href="interface.css">
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    <!-- ⬆⬆⬆ DELETE OR COMMENT OUT THESE TWO LINES BEFORE USING THE CLI ⬆⬆⬆ -->
+</head>
+
+<body>
+    <div id="titlepage" style="break-before: page; break-after: page; height: 100%; width: 100%;">
+        <div class="title">this journal belongs to</div>
+        <table>
+            <colgroup>
+                <col />
+                <col style="width: 80%;" />
+            </colgroup>
+            <tr>
+                <td>name:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="padding-top: 1em;">phone:</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="padding-top: 1em;">email:</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <div id="preface" style="break-before: page; break-after: page; height: 100%; width: 100%;">
+        <div id="publisher"></div>
+        <hr />
+        <div id="bindery"></div>
+        <div class="logocontainer">
+            <!-- if your logo isn't in svg format, you'll need to change the file extension here -->
+            <!-- or, delete the next line if you don't have or don't want to display your logo -->
+            <img src="icons/logo.svg"> 
+            <img src="icons/renegade.svg">
+        </div>
+    </div>
+    <div id="container"></div>
+    <script type="application/javascript" src="script.js"></script>
+</body>

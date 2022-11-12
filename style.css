@@ -1,0 +1,98 @@
+:root {
+    --base-font-size: 14pt; /* you'll probably want to fiddle with this */
+    --logo-height: 100px;
+}
+
+/* change the font here - look up font-face css rule if you don't know how */
+/* tried to pick some system fonts you might have installed that aren't awful */
+/* but seriously change the font though */
+@font-face {
+    font-family: Body;
+    src: local("Segoe Print"), local("Apple Chancery"), local("Georgia");
+}
+
+body {
+    font-size: var(--base-font-size);
+    font-family: Body;
+    font-feature-settings: "onum"; /* old-style numbers if the font has 'em... matter of taste */
+}
+
+/* I've done a somewhat opinionated border on the nameplate, you can change it here */
+table {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 2px solid black;
+    border-top-left-radius: 25% 8%;
+    border-top-right-radius: 5% 21%;
+    border-bottom-left-radius: 40% 4%;
+    border-bottom-right-radius: 20% 8%;
+}
+
+/* if you want to change how the dots look, here's what you fiddle with */
+.item {
+    background-image: radial-gradient(circle at center, #424242 1px, white 0);
+}
+
+#titlepage {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.title {
+    padding-bottom: 1em;
+    font-size: 1.5em;
+}
+
+#preface {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    font-size: .75em;
+    line-height: 1.5em;
+    padding-bottom: var(--logo-height);
+}
+
+hr {
+    border: none;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+hr::after {
+    /* I've chosen to put a little decoration on the publisher page. 
+    you can change this value, or get rid of it if you like. */
+    color: black;
+    content: "~*~";
+}
+
+.logocontainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logocontainer img {
+    max-height: var(--logo-height);
+    margin: 2rem;
+}
+
+.page {
+    page: dots;
+    break-before: page;
+    break-after: page;
+}
