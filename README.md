@@ -63,4 +63,4 @@ Here's an example of what the journal will look like (please excuse the crappy s
 
  ### Note
  
- This template was made for members of the Renegade Bindery discord server. Anyone is allowed to use it, but you may wish to remove the references to Renegade Bindery if you are not part of that group. You can easily do this by deleting `<div id="bindery"></div>` and `<img src="icons/renegade.svg">` from dotjournal.html.
+ This template was made for members of the Renegade Bindery discord server. Anyone is allowed to use it, but you may wish to remove the references to Renegade Bindery if you are not part of that group. You can easily do this by deleting `<img src="icons/renegade.svg">` from dotjournal.html and ```document.getElementById('bindery').innerHTML = `${binderyName} is a member of the<br/>Renegade Bindery collective`;``` from script.js
